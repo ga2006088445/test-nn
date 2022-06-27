@@ -1,0 +1,9 @@
+FROM python:3.7
+RUN curl -s https://packagecloud.io/install/repositories/github/git-lfs/script.deb.sh | bash
+RUN apt-get install git-lfs
+RUN /usr/local/bin/python -m pip install --upgrade pip
+RUN pip install torch==1.4.0
+RUN pip install pytorch-ignite==0.2.1
+RUN pip install transformers==2.1.1
+RUN pip install tensorboardX==1.8
+RUN pip install tensorflow
